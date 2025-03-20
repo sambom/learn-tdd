@@ -49,10 +49,12 @@ should be placed in `tests/authorService.test.ts`.
 
 Briefly explain a limitation of the tests in `tests/authorSchema.test.ts` in the space below.
 
-
+The limitation of the tests is that it is tightly coupled to the implementation. The depend on specify names and validation logic. Refactoring our codebase can cause failure to our test even if we dont change the functionality, just solely based on property names
 
 ## Part 3
 
 Generate the coverage report for the tests you wrote. How can you improve
 your tests using the coverage report? Briefly explain your 
 process in the space below.
+
+Our coverage report shows that we have covered 100% of our /pages/author file where the GET /authors service exist. Although we see that models/author file needs more testing. What we can do to improve our tests is to view the uncovered lines in our author.ts and write test for them like error handling and testing edge cases. This will imporve our coverage report
